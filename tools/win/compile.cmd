@@ -1,4 +1,4 @@
-cd..
+cd ..\..
 :1
 cmd /c docpad run
 @pause
