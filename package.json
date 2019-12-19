@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "docpad": "~6.78.4",
+    "docpad": "6.78.4",
     "docpad-plugin-eco": "~2.3.0",
     "docpad-plugin-marked": "~2.5.0",
-    "docpad-plugin-moment": "~2.0.2"
+    "docpad-plugin-moment": "~2.0.2",
+    "jsoneditor": "^8.1.0"
   },
   "main": "node_modules/.bin/docpad-server",
   "scripts": {
