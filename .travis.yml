@@ -1,7 +1,7 @@
 env:
-  herokuapi: ${{ secrets.herokuapi }}
+  herokuapi: ${{ secrets.HEROKUAPI }}
 deploy:
   provider: heroku
   api_key:
-    secure: "$herokuapi"
+    secure: "$HEROKUAPI"
   app: keanucode
