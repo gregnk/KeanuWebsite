@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/keanucode
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://keanu-code.netlify.com
+  * I am keanucode (https://keybase.io/keanucode) on keybase.
+  * I have a public key with fingerprint 24A9 8C14 C4F7 1EC7 09E8  4678 7897 C7F8 B7D7 79C8
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101b9377e806b95ab377ee73423877242414e94a3290fb8680061e9f1f7b59520620a",
+      "fingerprint": "24a98c14c4f71ec709e846787897c7f8b7d779c8",
+      "host": "keybase.io",
+      "key_id": "7897c7f8b7d779c8",
+      "kid": "0101b9377e806b95ab377ee73423877242414e94a3290fb8680061e9f1f7b59520620a",
+      "uid": "eb01faf378c399ec4e68d93b277a6b19",
+      "username": "keanucode"
+    },
+    "service": {
+      "hostname": "keanu-code.netlify.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1581266089,
+  "expire_in": 157680000,
+  "prev": "f62351fa25e752bb11d3f871f638f9f170f8375221b01ebfe8339706e92e9492",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.3
+Comment: https://keybase.io/crypto
+
+yMIuAnicrVJbSBRRGN61TFwKulAQXZmiImyZmTMz55wNoStkVkQllUm7c2bOuFM6
+s+3MWnahAh9KQisTkahAg/ISbGRpgmYWCG1ZDz4kXcigInqQsKSyqDNLQQ899nTO
++c/3fef7Ps79SeN8Af/t5LO5sQUNzf7U3YaEb/cKqekQR2y9nAsd4vbS9EJLdOq4
+4b2mzoU4XuAFggGEFPEKwbJKvD2FQBIBglCUREmQKJZUIGLeIEhBPK8IFBuCAYmM
+ZZFXRF7lcjjDtIppPBY3LZfJipKKkSZImmRAgWqQxxRJCkQQYahBAxGoQ4g1xIhR
+2/EYzBxRHRo0bTZjh3Da3j/w/9l3Ii1HCS8YqgEg0gDGVJOognQMiAihqhABe0CH
+xi21lKa9qlZCs3XKHcnh2LjM1KjXrBflb8gyDxO0qFtiGuVBzS5lMrG47dqaXcIw
+UdeNOSFPwy2PeaT9lIR/y4WJaemsUsYoo3HHtC0uJDCk5pqeviAjQVQUHuEcjh6I
+mXEaNj2EDL2gPO+9Q8uYpKGIQGbRRJlCWSREEHRgICgYCkAGawPyBgLsRhRYA5QY
+FAGAIa9QLLL2sMh5AfdZNheSmU21mEk6ZrGluok4S9/bUzTe5w/4JmRmeF/NF8ie
+/OcDbriUNZZ552TttUZpemTLBV/rxped5Ou29tVPHw/V15a+WXT6VM2ZlsMPtKwL
+YzVd878fH5zf2P5i9M1YbuHoSPbrE5+2n7v4Np/+fNZpP4mOVtyc9/bD1MvmkoGV
+R5tTm0jLTL2uqH/d+ZNVS/3VmcczuFTlrXVN7T3HAtUxkJt8NRwAc25EAjua6eKF
+25pyt35Ucg9eqerLuJeXWvsDJIcsX9sUZd+yVT/6kwXT+qvqzb7nke6uxsbe9TsL
+Wgc6P26t5K7OHg4Od0Rq9oz7nH+gu2vN5qN1g3lt7e+d77tarn15dPaR3Ff4rSKV
+mpE162HF64MN5N3EkQl3r0dn1A/hSnF5olTu+AVNqUl0
+=SAZD
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/keanucode
+
+==================================================================
