@@ -1,5 +1,7 @@
 # Keanu Website
-(PLACEHOLDER TEXT)
+
+The code for my website.
 
 ## Copyright
+
 Copyright &copy; 2019+ All rights reserved.
