@@ -7,14 +7,14 @@ isPage: true
 ---
 # TravBot Log 1 (02/29/2020)
 
-Welcome to the first TravBot update log!
+Welcome to the first [TravBot](https://github.com/keanuplayz/TravBot) update log!
 
 First off, the progress in January and Febuary was tremendous.
 
 A little log of what has been done:
 
 * The entire bot has been rewritten to use a new framework. (New command handler, logging module, and a lot more.)
-* Today, I added three new commands. These are `.poll`, `.urban` and `.shorten`.
+* Today, I added three new commands. These are [`.poll`](https://github.com/keanuplayz/TravBot/blob/dev/commands/poll.js), [`.urban`](https://github.com/keanuplayz/TravBot/blob/dev/commands/urban.js) and [`.shorten`](https://github.com/keanuplayz/TravBot/blob/dev/commands/shorten.js).
 * I renovated most of the commands.
 
 Regarding the three new commands, I would like to explain their usage.
