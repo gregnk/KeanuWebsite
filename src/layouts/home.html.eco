@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title><%= @document.title %></title>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-deep_purple.min.css" />
+    <meta name="description" content="<%= @document.description %>">
+    <meta name="keywords" content="<%= @document.keywords %>">
+    <meta charset="utf-8">
+    <!-- <link rel="icon" type="image/x-icon" href="/favicon.png"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">KeanuCode</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="/index.html">Home</a>
+                    <a class="mdl-navigation__link" href="/software/software.html">Software</a>
+                    <a class="mdl-navigation__link" href="/tools/tools.html">Tools</a>
+                    <a class="mdl-navigation__link" href="/updates/updates.html">Updates</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Menu</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="/index.html">Home</a>
+                <a class="mdl-navigation__link" href="/software/software.html">Software</a>
+                <a class="mdl-navigation__link" href="/tools/tools.html">Tools</a>
+                <a class="mdl-navigation__link" href="/updates/updates.html">Updates</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <!-- CONTENT BEGIN -->
+                <%- @content %>
+                <!-- CONTENT END -->
+            </div>
+        </main>
+
+    </div>
+
+
+</body>
+
+</html>
