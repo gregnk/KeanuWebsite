@@ -8,3 +8,4 @@ isPage: true
 <h1>Home</h1>
 <h3><a href="https://exam-site.netlify.com">Exam assignment.</a></h3>
 <h3><a href="files/dht.json" download>Download a backup of the C2DL website channel.</a></h3>
+<h3><a href="trav-docs/index.html">TravBot Documentation</a></h3>

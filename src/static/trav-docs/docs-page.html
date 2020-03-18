@@ -4,7 +4,6 @@
 <head>
 	<title>TravBot - Docs</title>
 
-	<!-- Meta -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +11,12 @@
 	<meta name="author" content="Keanu Timmermans">
 	<link rel="shortcut icon" href="favicon.ico">
 
-	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
 
-	<!-- FontAwesome JS-->
 	<script defer src="assets/fontawesome/js/all.min.js"></script>
 
-	<!-- Plugins CSS -->
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
 
-	<!-- Theme CSS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
 
 </head>
@@ -41,25 +36,19 @@
 								src="assets/images/travbot-logo.png" alt="logo"><span class="logo-text">Trav<span
 									class="text-alt">Bot</span></span></a></div>
 				</div>
-				<!--//docs-logo-wrapper-->
 				<div class="docs-top-utilities d-flex justify-content-end align-items-center">
 					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
-						<li class="list-inline-item"><a href="https://github.com/keanuplayz/TravBot"><i
+						<li class="list-inline-item"><a href="https://github.com/keanuplayz"><i
 									class="fab fa-github fa-fw"></i></a></li>
 						<li class="list-inline-item"><a href="https://twitter.com/KeanuRAR"><i
 									class="fab fa-twitter fa-fw"></i></a></li>
 					</ul>
-					<!--//social-list-->
 					<a href="https://github.com/keanuplayz/TravBot/archive/dev.zip"
 						class="btn btn-primary d-none d-lg-flex">Download</a>
 				</div>
-				<!--//docs-top-utilities-->
 			</div>
-			<!--//container-->
 		</div>
-		<!--//branding-->
 	</header>
-	<!--//header-->
 
 	<div class="docs-wrapper">
 		<div id="docs-sidebar" class="docs-sidebar">
@@ -86,19 +75,16 @@
 				</ul>
 
 			</nav>
-			<!--//docs-nav-->
 		</div>
-		<!--//docs-sidebar-->
 			<div class="container">
 				<article class="docs-article" id="section-1">
 					<header class="docs-header">
-						<h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 17/03/2020</span>
+						<h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 18/03/2020</span>
 						</h1>
 						<section class="docs-intro">
 							<p>Welcome to the TravBot documentation. this page will guide you through the codebase at a
 								glance.</p>
 						</section>
-						<!--//docs-intro-->
 					</header>
 					<section class="docs-section" id="item-1-1">
 						<h2 class="section-heading">1.1 Directory tree</h2>
@@ -131,7 +117,6 @@
 						<p>The <code>modules</code> folder contains our command handler, and the logger. The command handler takes care of loading and unloading commands upon client request. The logger takes care of sending messages (warnings, errors, etc) to the console.</p>
 
 					</section>
-					<!--//section-->
 
 					<section class="docs-section" id="item-1-2">
 						<h2 class="section-heading">1.2 Modules</h2>
@@ -145,7 +130,6 @@
 						<p>This module contains all code required for our beautiful console log. It has various cases on which it triggers, such as <code>warn</code>, <code>error</code>, <code>cmd</code>, and three less significant ones.</p>
 						<p>This module is exported and imported in all <a class="nav-link scrollto" href="#item-1-3">event</a> files.</p>
 					</section>
-					<!--//section-->
 
 					<section class="docs-section" id="item-1-3">
 						<h2 class="section-heading">1.3 Events</h2>
@@ -186,7 +170,6 @@
 						<p>This event is executed every time a user joins a guild the client is present in.</p>
 						<p>It is only used if the guild has configuration option <code>welcomeEnabled</code> set to true.</p>
 					</section>
-					<!--//section-->
 
 				</article>
 
@@ -196,7 +179,6 @@
 						<section class="docs-intro">
 							<p>This section will cover installing and setting up the bot.</p>
 						</section>
-						<!--//docs-intro-->
 					</header>
 					<section class="docs-section" id="item-2-1">
 						<h2 class="section-heading">2.1 Requirements</h2>
@@ -207,7 +189,6 @@
 							<li><a href="https://nodejs.org">Node.JS</a> (<a href="nodejs-installation.html">Tutorial</a>)</li>
 						</ul>						
 					</section>
-					<!--//section-->
 
 					<section class="docs-section" id="item-2-2">
 						<h2 class="section-heading">2.2 Setting up</h2>
@@ -232,15 +213,12 @@
 									<span class="callout-icon-holder">
 										<i class="fas fa-exclamation-triangle"></i>
 									</span>
-									<!--//icon-holder-->
 									Danger
 								</h4>
 								<p><b>Be aware</b>: one of the dependencies used is <code>better-sqlite3</code>. Better-SQLite3 depends on <code>integer</code>, which requires <code>windows-build-tools</code> to be installed globally.
 								Make sure to install this by opening up an Administrator PowerShell window and running <code>npm install --global --production windows-build-tools</code>.</p>
 							</div>
-							<!--//content-->
 						</div>
-						<!--//callout-block-->
 
 						<p>You can now install the bot dependencies by running:</p>
 						<div class="docs-code-block">
@@ -250,7 +228,6 @@
 						</div>
 						<p><b>Make sure to run <code>node setup.js</code> to complete the bot setup.</b></p>
 					</section>
-					<!--//section-->
 
 					<section class="docs-section" id="item-2-3">
 						<h2 class="section-heading">2.3 Running</h2>
@@ -261,14 +238,11 @@
 									<span class="callout-icon-holder mr-1">
 										<i class="fas fa-info-circle"></i>
 									</span>
-									<!--//icon-holder-->
 									Note
 								</h4>
 								<p>Make sure to do any personalisation before starting the bot.</p>
 							</div>
-							<!--//content-->
 						</div>
-						<!--//callout-block-->
 						<p>If you have not ran this yet, run <code>node setup.js</code> to set up the bot. You will need to input the bot token and the owner's user ID. The owner will have the highest pemission level, so make sure to enter your own ID!</p>
 						<p>After installing all dependencies, you should now be set to run the bot with:</p>
 						<div class="docs-code-block">
@@ -277,9 +251,7 @@
 							</code></pre>
 						</div>
 					</section>
-					<!--//section-->
 				</article>
-				<!--//docs-article-->
 
 				<!-- <article class="docs-article" id="section-3">
 					<header class="docs-header">
@@ -319,27 +291,23 @@
 				<footer class="footer">
 					<div class="container text-center py-5">
 						<ul class="social-list list-unstyled pt-4 mb-0">
-							<li class="list-inline-item"><a href="https://github.com/keanuplayz/TravBot"><i
+							<li class="list-inline-item"><a href="https://github.com/keanuplayz"><i
 										class="fab fa-github fa-fw"></i></a></li>
 							<li class="list-inline-item"><a href="https://twitter.com/KeanuRAR"><i
 										class="fab fa-twitter fa-fw"></i></a></li>
 						</ul>
-						<!--//social-list-->
 					</div>
 				</footer>
 			</div>
 	</div>
-	<!--//docs-wrapper-->
 
 
 
-	<!-- Javascript -->
 	<script src="assets/plugins/jquery-3.4.1.min.js"></script>
 	<script src="assets/plugins/popper.min.js"></script>
 	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
 
-	<!-- Page Specific JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
 	<script src="assets/js/highlight-custom.js"></script>
 	<script src="assets/plugins/jquery.scrollTo.min.js"></script>
