@@ -68,29 +68,27 @@
 					<li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
 								class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>Introduction</a>
 					</li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Section Item 1.1</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Section Item 1.2</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Section Item 1.3</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">Section Item 1.4</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">1.1 Directory tree</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">1.2 Modules</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">1.3 Events</a></li>
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
 								class="theme-icon-holder mr-2"><i class="fas fa-arrow-down"></i></span>Installation</a>
 					</li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Section Item 2.1</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Section Item 2.2</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Section Item 2.3</a></li>
-					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">2.1 Requirements</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">2.2 Setting up</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">2.3 Running</a></li>
+					<!-- <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
 								class="theme-icon-holder mr-2"><i class="fas fa-book-reader"></i></span>Resources</a>
 					</li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Section Item 3.1</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Section Item 3.2</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">Section Item 3.3</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">Section Item 3.3</a></li> -->
 				</ul>
 
 			</nav>
 			<!--//docs-nav-->
 		</div>
 		<!--//docs-sidebar-->
-		<div class="docs-content">
 			<div class="container">
 				<article class="docs-article" id="section-1">
 					<header class="docs-header">
@@ -105,18 +103,88 @@
 					<section class="docs-section" id="item-1-1">
 						<h2 class="section-heading">1.1 Directory tree</h2>
 						<p>This section will cover the directory tree.</p>
+						<pre class="shadow-lg rounded"><code class="lang-html">
+  /
+  ├── assets/
+  |   └── [image files for ravi]
+  ├── commands/
+  |   ├── storage/
+  |   |   └── UserData.json
+  |   └── [command files]
+  ├── events/
+  |   └── [Discord.JS event files]
+  ├── modules/
+  |   └── [modules used by bot]
+  ├── colours.json
+  ├── config.js.example
+  ├── config_base.txt
+  ├── index.js
+  ├── package.json
+  ├── package-lock.json
+  ├── setup.js
+  └── whois.json
+						</code></pre>
+						<h5>Folder/file explanation:</h5>
+						<p>The <code>assets</code> folder contains all images for the <code>.ravi</code> command. This might be subject of change in a later release.</p>
+						<p>The <code>commands</code> folder contains, as you might expect, all command files. These are being loaded from <code>modules/functions.js</code>, which has the command handler.</p>
+						<p>The <code>events</code> folder contains all Discord.JS events. These are seperate files which are called upon emittance of certain events.</p>
+						<p>The <code>modules</code> folder contains our command handler, and the logger. The command handler takes care of loading and unloading commands upon client request. The logger takes care of sending messages (warnings, errors, etc) to the console.</p>
+
 					</section>
 					<!--//section-->
 
 					<section class="docs-section" id="item-1-2">
 						<h2 class="section-heading">1.2 Modules</h2>
 						<p>This section will cover the modules.</p>
+						
+						<h5>Functions</h5>
+						<p>This module provides basic bot functionality. It currently contains a JSON object which stores the default values for the bot settings, a function to properly display permission levels, and our command handler which can load and unload command files</p>
+						<p>The module is exported and imported in every single command file.</p>
+						
+						<h5>Logger</h5>
+						<p>This module contains all code required for our beautiful console log. It has various cases on which it triggers, such as <code>warn</code>, <code>error</code>, <code>cmd</code>, and three less significant ones.</p>
+						<p>This module is exported and imported in all <a class="nav-link scrollto" href="#item-1-3">event</a> files.</p>
 					</section>
 					<!--//section-->
 
 					<section class="docs-section" id="item-1-3">
 						<h2 class="section-heading">1.3 Events</h2>
-						<p>This section will cover the events.</p>
+						<p>This section will cover the events. All of these events are customizable to your liking.</p>
+						<p>They use the Logger module for logging events to the console.</p>
+
+						<h5>ready</h5>
+						<p>This event is executed once the client is ready. It logs the client user ID, the amount of users in all guilds, and the total number of guilds.</p>
+						<p>After that, it sets the client activity to <code>Listening to [default prefix]help</code></p>
+
+						<h5>reconnecting</h5>
+						<p>This event is executed once the client is trying to reconnect.</p>
+						<p>It logs a message stating the client is reconnecting, and sets the same client activity as the <code>ready</code> event once it is reconnected.</p>
+
+						<h5>disconnected</h5>
+						<p>This event is executed once the client has lost connection.</p>
+						<p>It logs a message stating that the client has lost connection.</p>
+
+						<h5>message</h5>
+						<p>This event is executed every time a message is received on the client side.</p>
+						<p>It checks if the message was sent by a bot, then checks if the message starts with a prefix, after that it checks if the command which is being called exists, and finally it checks if the user has the required permission level to execute the command.</p>
+
+						<h5>error</h5>
+						<p>This event is executed every time Discord.JS sends an error.</p>
+						<p>It stringifies the error, and then logs it to the console.</p>
+
+						<h5>guildCreate</h5>
+						<p>This event is executed every time the client is added to a guild.</p>
+						<p>It logs the guild name, guild ID, owner of the guild, and the ID of the owner.</p>
+						<p>It then sends a message to a channel ID stating the same as the console.</p>
+
+						<h5>guildDelete</h5>
+						<p>This event is executed every time the client is removed from a guild.</p>
+						<p>It logs the guild name, and the guild ID.</p>
+						<p>It then sends a message to a channel ID stating the same as the console.</p>
+
+						<h5>guildMemberAdd</h5>
+						<p>This event is executed every time a user joins a guild the client is present in.</p>
+						<p>It is only used if the guild has configuration option <code>welcomeEnabled</code> set to true.</p>
 					</section>
 					<!--//section-->
 
@@ -131,44 +199,94 @@
 						<!--//docs-intro-->
 					</header>
 					<section class="docs-section" id="item-2-1">
-						<h2 class="section-heading">Section Item 2.1</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis
-							leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis
-							felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio
-							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
-							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">2.1 Requirements</h2>
+						<p>This section will cover setting up all requirements.</p>
+						<p>Setting up the bot requires two things:</p>
+						<ul>
+							<li><a href="https://git-scm.com/">Git SCM</a> (<a href="git-installation.html">Tutorial</a>)</li>
+							<li><a href="https://nodejs.org">Node.JS</a> (<a href="nodejs-installation.html">Tutorial</a>)</li>
+						</ul>						
 					</section>
 					<!--//section-->
 
 					<section class="docs-section" id="item-2-2">
-						<h2 class="section-heading">Section Item 2.2</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis
-							leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis
-							felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio
-							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
-							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">2.2 Setting up</h2>
+						<p>This section will cover setting up the bot.</p>
+						<p>Once you have installed git, <code>cd</code> to a directory where you would like to install the bot.</p>
+						<p>Next, run:</p>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="lang-bash">
+  git clone https://github.com/keanuplayz/TravBot
+							</code></pre>
+						</div>
+						<p>After you have cloned the repository, <code>cd</code> to the bot directory with:</p>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="lang-bash">
+  cd TravBot
+							</code></pre>
+						</div>
+
+						<div class="callout-block callout-block-danger mr-1">
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder">
+										<i class="fas fa-exclamation-triangle"></i>
+									</span>
+									<!--//icon-holder-->
+									Danger
+								</h4>
+								<p><b>Be aware</b>: one of the dependencies used is <code>better-sqlite3</code>. Better-SQLite3 depends on <code>integer</code>, which requires <code>windows-build-tools</code> to be installed globally.
+								Make sure to install this by opening up an Administrator PowerShell window and running <code>npm install --global --production windows-build-tools</code>.</p>
+							</div>
+							<!--//content-->
+						</div>
+						<!--//callout-block-->
+
+						<p>You can now install the bot dependencies by running:</p>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="lang-bash">
+  npm install
+							</code></pre>
+						</div>
+						<p><b>Make sure to run <code>node setup.js</code> to complete the bot setup.</b></p>
 					</section>
 					<!--//section-->
 
 					<section class="docs-section" id="item-2-3">
-						<h2 class="section-heading">Section Item 2.3</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis
-							leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis
-							felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio
-							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
-							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">2.3 Running</h2>
+						<div class="callout-block callout-block-info">
+
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder mr-1">
+										<i class="fas fa-info-circle"></i>
+									</span>
+									<!--//icon-holder-->
+									Note
+								</h4>
+								<p>Make sure to do any personalisation before starting the bot.</p>
+							</div>
+							<!--//content-->
+						</div>
+						<!--//callout-block-->
+						<p>If you have not ran this yet, run <code>node setup.js</code> to set up the bot. You will need to input the bot token and the owner's user ID. The owner will have the highest pemission level, so make sure to enter your own ID!</p>
+						<p>After installing all dependencies, you should now be set to run the bot with:</p>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="lang-bash">
+  node index.js
+							</code></pre>
+						</div>
 					</section>
 					<!--//section-->
 				</article>
 				<!--//docs-article-->
 
-				<article class="docs-article" id="section-3">
+				<!-- <article class="docs-article" id="section-3">
 					<header class="docs-header">
 						<h1 class="docs-heading">Resources</h1>
 						<section class="docs-intro">
 							<p>This section will cover the resources used to write this bot.</p>
 						</section>
-						<!--//docs-intro-->
 					</header>
 					<section class="docs-section" id="item-3-1">
 						<h2 class="section-heading">Section Item 3.1</h2>
@@ -178,7 +296,6 @@
 							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
 							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
 					</section>
-					<!--//section-->
 
 					<section class="docs-section" id="item-3-2">
 						<h2 class="section-heading">Section Item 3.2</h2>
@@ -188,7 +305,6 @@
 							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
 							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
 					</section>
-					<!--//section-->
 
 					<section class="docs-section" id="item-3-3">
 						<h2 class="section-heading">Section Item 3.3</h2>
@@ -198,9 +314,7 @@
 							in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec
 							arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
 					</section>
-					<!--//section-->
-				</article>
-				<!--//docs-article-->
+				</article> -->
 
 				<footer class="footer">
 					<div class="container text-center py-5">
@@ -214,7 +328,6 @@
 					</div>
 				</footer>
 			</div>
-		</div>
 	</div>
 	<!--//docs-wrapper-->
 
