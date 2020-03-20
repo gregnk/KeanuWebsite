@@ -1,1 +1,18 @@
+name: npm install
+on: [push]
+jobs:
+  npm_install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: bahmutov/npm-install@HEAD
+        with:
+          working-directory: ./
+      - run: npm t
+        working-directory: ./
 
+      - name: Generating
+        run: |
+          sh ./tools/generate.sh
