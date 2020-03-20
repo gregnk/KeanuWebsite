@@ -16,7 +16,7 @@ jobs:
       - name: Creating generate script
         run: touch generate.sh
       - name: Appending content to script
-        run: echo "npm i && npm i -g docpad" >> generate.sh
+        run: echo "sudo npm i && sudo npm i -g docpad" >> generate.sh
       - name: Appending more content to script
         run: echo "docpad generate" >> generate.sh
       - name: Executing script
