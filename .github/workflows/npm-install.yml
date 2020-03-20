@@ -1,5 +1,5 @@
 name: npm install
-on: [push]
+on: [push, pull_request]
 jobs:
   npm_install:
     runs-on: ubuntu-latest
@@ -17,6 +17,7 @@ jobs:
         run: touch generate.sh
       - name: Appending content to script
         run: echo "npm i" >> generate.sh
+      - name: appending more content to script
         run: echo "docpad generate" >> generate.sh
       - name: Executing script
         run: sh generate.sh
