@@ -15,15 +15,14 @@ jobs:
 
       - name: Creating generate script
         run: touch generate.sh
-
       - name: Appending content to script.
-        run: echo "sudo npm i && sudo npm i -g docpad" >> generate.sh \
-        echo "sudo docpad generate" >> generate.sh \
-        echo "if [ $? -eq 0 ]; then" >> generate.sh \
-        echo "   echo Command passed successfully." >> generate.sh \
-        echo "else" >> generate.sh \
-        echo "   echo Command failed." >> generate.sh \
-        /
+        run: | 
+            echo "sudo npm i && sudo npm i -g docpad" >> generate.sh
+            echo "sudo docpad generate" >> generate.sh
+            echo "if [ $? -eq 0 ]; then" >> generate.sh
+            echo "   echo Command passed successfully." >> generate.sh
+            echo "else" >> generate.sh
+            echo "   echo Command failed." >> generate.sh
       - name: fi statement
         run: echo "fi" >> generate.sh
       - name: Executing script
