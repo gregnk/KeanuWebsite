@@ -1,4 +1,4 @@
-name: npm install
+name: Check for errors
 on: [push, pull_request]
 jobs:
   npm_install:
@@ -15,19 +15,15 @@ jobs:
 
       - name: Creating generate script
         run: touch generate.sh
-      - name: Appending content to script.
-        run: echo "sudo npm i && sudo npm i -g docpad" >> generate.sh
 
-      - name: Appending more content to script.
-        run: echo "sudo docpad generate" >> generate.sh
-      - name: Even more appending!
-        run: echo "if [ $? -eq 0 ]; then" >> generate.sh
-      - name: Jeez, you're filling this file up.
-        run: echo "   echo Command passed successfully." >> generate.sh
-      - name: Okay, you can stop.
-        run: echo "else" >> generate.sh
-      - name: Final appendation.
-        run: echo "   echo Command failed." >> generate.sh
+      - name: Appending content to script.
+        run: echo "sudo npm i && sudo npm i -g docpad" >> generate.sh \
+        echo "sudo docpad generate" >> generate.sh \
+        echo "if [ $? -eq 0 ]; then" >> generate.sh \
+        echo "   echo Command passed successfully." >> generate.sh \
+        echo "else" >> generate.sh \
+        echo "   echo Command failed." >> generate.sh \
+        /
       - name: fi statement
         run: echo "fi" >> generate.sh
       - name: Executing script
