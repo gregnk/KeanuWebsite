@@ -1,0 +1,29 @@
+name: Check for errors
+on: [push, pull_request]
+jobs:
+  npm_install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: bahmutov/npm-install@HEAD
+        with:
+          working-directory: ./
+      - run: npm t
+        working-directory: ./
+
+      - name: Creating generate script
+        run: touch generate.sh
+      - name: Appending content to script.
+        run: | 
+            echo "sudo npm i && sudo npm i -g docpad" >> generate.sh
+            echo "sudo docpad generate" >> generate.sh
+            echo "if [ $? -eq 0 ]; then" >> generate.sh
+            echo "   echo Command passed successfully." >> generate.sh
+            echo "else" >> generate.sh
+            echo "   echo Command failed." >> generate.sh
+      - name: fi statement
+        run: echo "fi" >> generate.sh
+      - name: Executing script
+        run: sh generate.sh
