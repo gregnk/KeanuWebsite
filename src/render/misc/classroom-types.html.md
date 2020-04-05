@@ -44,10 +44,10 @@ Een opdracht bevat 3 dingen:
 Een opdracht heeft de mogelijkheid om een deadline toe te voegen. Deze komt dan in de Classroom "kalender".
 
 Een leerling kan dan het menu openen:
-![Classroom Menu](https://github.com/keanuplayz/KeanuWebsite/tree/docpad-reinstate/src/static/classroom-types/class-1.png "Classroom Menu")
+![Classroom Menu](https://raw.githubusercontent.com/keanuplayz/KeanuWebsite/docpad-reinstate/src/static/classroom-types/class-1.png "Classroom Menu")
 
 En via daar naar "Kalender":
-![Classroom Calendar](https://github.com/keanuplayz/KeanuWebsite/tree/docpad-reinstate/src/static/classroom-types/class-2.png "Classroom Menu")
+![Classroom Calendar](https://raw.githubusercontent.com/keanuplayz/KeanuWebsite/docpad-reinstate/src/static/classroom-types/class-2.png "Classroom Menu")
 
 ---
 <sub>&copy; 2020 - Keanu Timmermans</sub>
