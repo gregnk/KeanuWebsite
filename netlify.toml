@@ -1,0 +1,12 @@
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+
+[[plugins]]
+package = "netlify-plugin-rss"
+  [plugins.inputs]
+  dirToScan = "/updates/content" # a subfolder to scan. "/" to scan all
+  authorName = "Keanu"
+  site_url = "https://keanu-code.netlify.com"
+  title = "KeanuCode RSS Feed"
+  rssDescription = "keanu-code RSS Feed"
+  categories = ['Technology', 'JavaScript', 'Web Development']
