@@ -11,3 +11,4 @@ isPage: true
 <h3><a href="nullboard/nullboard.html">Nullboard</a></h3>
 <h3><a href="flipbook/index.html">Flipbook</a></h3>
 <h3><a href="counter/counter.html">JS Counter</a></h3>
+<h3><a href="cps-counter/index.html">CPS Counter</a></h3>
