@@ -4,7 +4,7 @@
   "description": "",
   "dependencies": {
     "docpad": "6.83.1",
-    "docpad-plugin-eco": "~2.3.0",
+    "docpad-plugin-eco": "~2.5.0",
     "docpad-plugin-marked": "~2.7.0",
     "docpad-plugin-moment": "~2.0.2"
   },
